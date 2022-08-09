@@ -250,10 +250,16 @@ nl {
     left: 50%;
     width: 528px;
     min-height: 581px;
+    padding: 40px;
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
-    background-color: #fff;
-    transition-property: transform;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+                0px 1px 1px rgba(0, 0, 0, 0.14), 
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
                   opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -272,12 +278,181 @@ nl {
 .cls-mdl-button-svg {
     height: 30px;
     width: 30px;
-    fill: red;
+    fill: #000000;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.cls-mdl-button-svg:hover,
+.cls-mdl-button-svg:focus {
+    fill: var(--accent-color);
+}
 
+.form-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
 
+    color: #212121;
+}
 
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-list-name {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+
+    color: #757575;
+}
+
+.form-input-field {
+    width: 100%;
+    padding: 11px 12px;
+    padding-left: 42px;
+    /* border: 1px solid rgba(33, 33, 33, 0.2); */
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.f-svg {
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.f-svg:hover,
+.f-svg:focus {
+    /* fill: var(--accent-color); */
+    border: 1px solid var(--accent-color);
+    /* border-radius: 4px; */
+}
+
+.form-svg {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    fill: #212121;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+
+.f-svg:hover .form-svg {
+    fill: var(--accent-color);
+}
+
+.f-svg:focus .form-svg {
+    fill: var(--accent-color);
+}
+
+.form-solusion {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+
+    color: #757575;
+}
+
+.form-button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.98;
+    
+    letter-spacing: 0.06em;
+    padding: 10px 55px;
+    color: #FFFFFF;
+    background: #188CE8;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+    border-radius: 4px;
+    border-color: #188CE8;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button:hover,
+.form-button:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-input-field input::placeholder {
+    color: #757575;
+}
+
+.label-checkbox {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    text-align: right;
+    padding-right: 12px;
+    margin-bottom: 30px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.form-checkbox  {
+    appearance: none;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 15px;
+    background-image: url(../images/icon-not-check.svg);
+}
+
+.form-checkbox:checked {
+    background-image: url(../images/icon-check.svg);
+}
+
+.contract {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+}
+
+.form-comment {
+    resize: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+    padding: 12px 16px;
+}
 
 /* =================== /MODAL ====================*/
 
@@ -643,7 +818,12 @@ nl {
     border: none;
 }
 /* =================== /clients ====================*/
+
+
 /*==================== /MAIN ====================*/
+
+
+
 
 /*==================== FOOTER ====================*/
 .footer {
@@ -692,6 +872,7 @@ nl {
 .footer-social {
     padding-left: 70px;
     padding-top: 12px;
+    margin-right: 93px;
 }
 
 .footer-list {
@@ -727,8 +908,84 @@ nl {
     outline: none;
 }
 
-.footer-icon {
+.footer-form {
+    padding-top: 12px;
+}
+
+.footer-form-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.12;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.footer-input {
+    width: 358px;
+    padding: 15px 16px;
+    padding: 14px 16px;
+    margin-right: 12px;
+    font-size: 16px;
+    background-color: #2F303A;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+/* .    {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+} */
+
+.footer-input-btn {
+    /* display: flex; */
+}
+
+.footer-form-btn {
+    position: relative;
+    text-align: start;
+    padding: 0 28px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.06em;    
+    color: #FFF;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    outline: none;
+}
+
+.footer-send-svg {
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    content: "";
+    width: 24px;
+    height: 24px;
     
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    fill: #FFF;
+}
+
+.f-s {
+    width: 24px;
+    height: 24px;
 }
 
 /*==================== /FOOTER ====================*/
@@ -845,7 +1102,6 @@ nl {
     letter-spacing: 0.03em;
 
     color: #FFFFFF;
-
 }
 
 .port-project:hover .port-overlay {
@@ -853,8 +1109,7 @@ nl {
 }
 
 .port-project:hover {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));   
 }
 
 .port-title-link {

@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
             rel="stylesheet">
 
-        <title> home-work-5</title>
+        <title>home-work-6</title>
     </head>
     <body>
         
@@ -369,11 +369,53 @@
 
             <div data-modal class="backdrop is-hidden">
                 <div class="modal">
+                    <form class="form">
+                        <h3 class="form-title">
+                            Оставьте свои данные, мы вам перезвоним
+                        </h3>
+                        <div class="form-input">
+                            <label for="f-name" class="form-list-name">Имя</label>
+                            <div class="f-svg">
+                                 <input type="text" name="user-name" autofocus  class="form-input-field form-input-field-name" 
+                                placeholder="Микола Франкиш" id="f-name"/>
+                                <svg class="form-svg">
+                                    <use href="./modal/modal-symbols.svg#person-black" ></use>
+                                </svg>
+                               
+                            </div>
+                            <label for="f-tel" class="form-list-name">Телефон</label>
+                            <div class="f-svg">
+                                <input type="tel" name="user-tel" class="form-input-field form-input-field-tel" placeholder="+380 96-111-1111" id="f-tel"/>
+                                <svg class="form-svg">
+                                    <use href="./modal/modal-symbols.svg#phone-black" ></use>
+                                </svg>
+                                
+                            </div>
+                            <label for="f-mail" class="form-list-name">Почта</label>
+                            <div class="f-svg">
+                                <input type="email" name="user-email" class="form-input-field form-input-field-mail" id="f-mail"/>
+                                <svg class="form-svg">
+                                    <use href="./modal/modal-symbols.svg#email-black" ></use>
+                                </svg>
+                                
+                            </div>
+                            <label for="f-comment" for="comment" class="form-list-name">Комментарий</label>
+                            <div class="f-svg">
+                                <textarea name="user-comment" id="comment"  rows="8" class="form-comment form-input-field" placeholder="Введите текст" id="f-comment"></textarea>
+                            </div>
+                        </div>
+                        <label class="label-checkbox">
+                            <input type="checkbox" name="form-checkbox" class="form-checkbox">Соглашаюсь с рассылкой и принимаю <a href="#" class="contract">Условия договора</a> 
+                        </label>
+                        <button type="submit" class="form-button">Отправить
+                        </button>
+                        
+                    </form>
                     <button class="mdl-button" type="button" data-modal-close>
-                        <a href="./index.html">
+                        <a href="./index.html" class="cls-btn">
                             <!-- <img src="./images/close.svg" alt="X"> -->
                             <svg class="cls-mdl-button-svg">
-                                <use  href="./images/symbol-defs.svg#close"></use>
+                                <use  href="./modal/modal-symbols.svg#close"></use>
                             </svg>
                         </a>
                     </button>
@@ -438,6 +480,17 @@
                         </li>
                     </ul>
                 </div>
+                <form class="footer-form">
+                    <h3 class="footer-form-title">Подпишитесь на рассылку</h3>
+                    <!-- <div class="footer-input-btn"> -->
+                        <input type="email" placeholder="E-mail" class="footer-input">
+                        <button type="submit" class="footer-form-btn">Подписаться
+                            <svg class="footer-send-svg">
+                                <use href="./modal/modal-symbols.svg#send" class="f-s"></use>
+                            </svg>
+                        </button>
+                    <!-- </div> -->
+                </form>
             </div>
        </footer>
        
